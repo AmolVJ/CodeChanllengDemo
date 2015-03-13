@@ -34,23 +34,15 @@
     [alert show];
 }
 
-#pragma mark - UIAlertView Delegate Method
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (buttonIndex == 0) {
-        [self performSegueWithIdentifier:viewName sender:self];
-    }
-}
-
-#pragma mark - Dropbox Methods
-- (DBRestClient *)restClient
-{
-    if (self.restClient == nil) {
-        self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
-        self.restClient.delegate = self;
-    }
-    return self.restClient;
-}
+//#pragma mark - Dropbox Methods
+//- (DBRestClient *)restClient
+//{
+//    if (self.restClient == nil) {
+//        self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+//        self.restClient.delegate = self;
+//    }
+//    return self.restClient;
+//}
 
 
 #pragma mark - Action Methods
