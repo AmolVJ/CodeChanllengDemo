@@ -34,6 +34,7 @@
 		1073E02E1AB2D0F300B25B7B /* RecordSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1073E02D1AB2D0F300B25B7B /* RecordSoundViewController.m */; };
 		1073E0311AB2D41800B25B7B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1073E02F1AB2D40C00B25B7B /* AVFoundation.framework */; };
 		1073E0341AB2DF8E00B25B7B /* CreateNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1073E0331AB2DF8E00B25B7B /* CreateNotesViewController.m */; };
+		1073E0361AB2F71200B25B7B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1073E0351AB2F71200B25B7B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		1073E02F1AB2D40C00B25B7B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1073E0321AB2DF8E00B25B7B /* CreateNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateNotesViewController.h; sourceTree = "<group>"; };
 		1073E0331AB2DF8E00B25B7B /* CreateNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateNotesViewController.m; sourceTree = "<group>"; };
+		1073E0351AB2F71200B25B7B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ../Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				100EDAD41AB1FAAC00FB33F3 /* ViewControllers */,
 				100EDAAA1AB1F85200FB33F3 /* AppDelegate.h */,
 				100EDAAB1AB1F85200FB33F3 /* AppDelegate.m */,
+				1073E0351AB2F71200B25B7B /* Localizable.strings */,
 				100EDAD21AB1FA1900FB33F3 /* Main.storyboard */,
 				100EDAB31AB1F85200FB33F3 /* Images.xcassets */,
 				100EDAB51AB1F85200FB33F3 /* LaunchScreen.xib */,
@@ -334,6 +337,7 @@
 				100EDAD31AB1FA1900FB33F3 /* Main.storyboard in Resources */,
 				100EDAB71AB1F85200FB33F3 /* LaunchScreen.xib in Resources */,
 				100EDAB41AB1F85200FB33F3 /* Images.xcassets in Resources */,
+				1073E0361AB2F71200B25B7B /* Localizable.strings in Resources */,
 				100EDAF11AB206E100FB33F3 /* Upload.png in Resources */,
 				100EDAF41AB20BEB00FB33F3 /* image.jpeg in Resources */,
 				100EDAFE1AB2227B00FB33F3 /* open.png in Resources */,

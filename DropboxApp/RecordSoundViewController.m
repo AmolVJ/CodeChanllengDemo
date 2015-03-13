@@ -9,7 +9,13 @@
 #import "RecordSoundViewController.h"
 
 @interface RecordSoundViewController ()
+@property (nonatomic, retain) IBOutlet UIButton *playButton;
+@property (nonatomic, retain) IBOutlet UIButton *recordButton;
+@property (nonatomic, retain) IBOutlet UIButton *stopButton;
 
+-(IBAction) recordAudio;
+-(IBAction) playAudio;
+-(IBAction) stop;
 @end
 
 @implementation RecordSoundViewController

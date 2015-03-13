@@ -11,6 +11,7 @@
 
 @interface OpenImageViewController ()
 
+@property (nonatomic, strong) IBOutlet UIImageView *downloadedImage;
 - (IBAction)shareOnFacebook:(id)sender;
 
 @end
@@ -30,7 +31,6 @@
 
 - (IBAction)shareOnFacebook:(id)sender {
         SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        [controller setInitialText:@"Sharing dropbox image"];
         [controller addImage:[UIImage imageWithContentsOfFile:self.filePath]];
         [self presentViewController:controller animated:YES completion:Nil];
 }

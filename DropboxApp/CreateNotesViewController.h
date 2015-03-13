@@ -9,6 +9,4 @@
 #import <UIKit/UIKit.h>
 
 @interface CreateNotesViewController : UIViewController <UITextViewDelegate>
-@property (nonatomic, strong) IBOutlet UITextView *createNoteTextview;
-- (IBAction)createNote:(id)sender;
 @end

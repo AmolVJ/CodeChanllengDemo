@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface OpenImageViewController : UIViewController
-@property (nonatomic, strong) IBOutlet UIImageView *downloadedImage;
 @property (nonatomic, strong) NSString *filePath;
 @end

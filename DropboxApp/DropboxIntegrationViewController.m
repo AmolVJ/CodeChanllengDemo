@@ -16,6 +16,10 @@
 {
     BOOL isGpsDataButtonPressed;
 }
+@property (nonatomic, strong) DBRestClient *restClient;
+-(IBAction)btnUploadFilePress:(id)sender;
+-(IBAction)btnDownloadFilePress:(id)sender;
+-(IBAction)btnGpsDataPress:(id)sender;
 @end
 
 @implementation DropboxIntegrationViewController
@@ -30,27 +34,15 @@
 
 -(void)dropboxLoginDone
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"User logged in successfully." delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"USER_LOGIN_SUCCESS", @"") delegate:self cancelButtonTitle:nil otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
     [alert show];
 }
-
-//#pragma mark - Dropbox Methods
-//- (DBRestClient *)restClient
-//{
-//    if (self.restClient == nil) {
-//        self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
-//        self.restClient.delegate = self;
-//    }
-//    return self.restClient;
-//}
-
 
 #pragma mark - Action Methods
 -(IBAction)btnUploadFilePress:(id)sender
 {
     isGpsDataButtonPressed = false;
     if (![[DBSession sharedSession] isLinked]) {
-        viewName = @"OpenUploadFileView";
         [[DBSession sharedSession] linkFromController:self];
     } else {
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -64,7 +56,6 @@
 -(IBAction)btnDownloadFilePress:(id)sender
 {
     if (![[DBSession sharedSession] isLinked]) {
-        viewName = @"OpenDownloadFileView";
         [[DBSession sharedSession] linkFromController:self];
     } else {
         [self performSegueWithIdentifier:@"OpenDownloadFileView" sender:self];
@@ -88,7 +79,14 @@
             ALAssetsLibrary *assetLibrary = [[ALAssetsLibrary alloc] init];
             [assetLibrary assetForURL:[info objectForKey:UIImagePickerControllerReferenceURL] resultBlock:^(ALAsset *asset) {
                 CLLocation *location = [asset valueForProperty:ALAssetPropertyLocation];
-                [self showAlertWithMessage:[NSString stringWithFormat:@"%@",location]];
+                
+                if (location == nil) {
+                       [self showAlertWithMessage:NSLocalizedString(@"DATA_NOT_AVAIL", @"")];
+                }
+                else {
+                       [self showAlertWithMessage:[NSString stringWithFormat:@"%@",location]];
+                }
+             
                  [MBProgressHUD hideHUDForView:self.view animated:YES];
                 
             } failureBlock:^(NSError *error) {
@@ -116,7 +114,7 @@
 -(void)restClient:(DBRestClient *)client uploadedFile:(NSString *)destPath from:(NSString *)srcPath
 {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
-    [self showAlertWithMessage:@"File uploaded successfully."];
+    [self showAlertWithMessage:NSLocalizedString(@"FILE_UPLOAD_SUCCESS", @"")];
 }
 
 -(void)restClient:(DBRestClient *)client uploadFileFailedWithError:(NSError *)error

@@ -16,9 +16,4 @@
     
 }
 
-@property (nonatomic, strong) IBOutlet UIImageView *downloadedImage;
-@property (nonatomic, strong) IBOutlet UITableView *downloadTableview;
-@property (nonatomic, readonly) DBRestClient *restClient;
-@property (nonatomic, strong) NSString *loadData;
-
 @end

@@ -10,13 +10,5 @@
 #import <DropboxSDK/DropboxSDK.h>
 
 @interface DropboxIntegrationViewController : UIViewController <UIPopoverControllerDelegate, UIImagePickerControllerDelegate,DBRestClientDelegate, UINavigationControllerDelegate>
-{
-    NSString *viewName;
-}
-
-@property (nonatomic, strong) DBRestClient *restClient;
--(IBAction)btnUploadFilePress:(id)sender;
--(IBAction)btnDownloadFilePress:(id)sender;
--(IBAction)btnGpsDataPress:(id)sender;
 
 @end

@@ -9,7 +9,8 @@
 #import "CreateNotesViewController.h"
 
 @interface CreateNotesViewController ()
-
+@property (nonatomic, strong) IBOutlet UITextView *createNoteTextview;
+- (IBAction)createNote:(id)sender;
 @end
 
 @implementation CreateNotesViewController
@@ -46,9 +47,9 @@
     [stringToWrite writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:&error];
     
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@""
-                                                   message:@"Created Successfully !!"
+                                                   message:NSLocalizedString(@"NOTE_CREATED", @"")
                                                   delegate:nil
-                                         cancelButtonTitle:@"Ok"
+                                         cancelButtonTitle:NSLocalizedString(@"OK", @"")
                                          otherButtonTitles:nil];
     [alert show];
 
@@ -61,8 +62,5 @@
    NSString *noteData = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&error];
     self.createNoteTextview.text = noteData;
 }
-
-
-
 
 @end
