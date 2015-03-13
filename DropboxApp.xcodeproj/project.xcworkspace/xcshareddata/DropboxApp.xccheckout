@@ -10,14 +10,14 @@
 	<string>DropboxApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>5B67389D4802B4078F999A2A70CC50BDA8FB7B55</key>
+		<key>79BD7E8F731C7FE18DB59FD4E5B6443D556C8C41</key>
 		<string>https://github.com/AmolVJ/CodeChanllengDemo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DropboxApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>5B67389D4802B4078F999A2A70CC50BDA8FB7B55</key>
+		<key>79BD7E8F731C7FE18DB59FD4E5B6443D556C8C41</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>5B67389D4802B4078F999A2A70CC50BDA8FB7B55</string>
+	<string>79BD7E8F731C7FE18DB59FD4E5B6443D556C8C41</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>5B67389D4802B4078F999A2A70CC50BDA8FB7B55</string>
+			<string>79BD7E8F731C7FE18DB59FD4E5B6443D556C8C41</string>
 			<key>IDESourceControlWCCName</key>
 			<string>CodeChanllengDemo</string>
 		</dict>
